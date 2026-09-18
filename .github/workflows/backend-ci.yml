@@ -37,7 +37,7 @@ jobs:
       - name: Analyze with SonarQube
         if: ${{ env.SONAR_HOST_URL != '' && env.SONAR_TOKEN != '' }}
         run: >
-          mvn -B sonar:sonar
+          mvn -B org.sonarsource.scanner.maven:sonar-maven-plugin:5.8.0.7211:sonar
           -Dsonar.projectKey=examen__b
           -Dsonar.host.url=${{ env.SONAR_HOST_URL }}
           -Dsonar.token=${{ env.SONAR_TOKEN }}
