@@ -38,7 +38,7 @@ jobs:
         if: ${{ env.SONAR_HOST_URL != '' && env.SONAR_TOKEN != '' }}
         run: >
           mvn -B sonar:sonar
-          -Dsonar.projectKey=examen-backend
+          -Dsonar.projectKey=examen__b
           -Dsonar.host.url=${{ env.SONAR_HOST_URL }}
           -Dsonar.token=${{ env.SONAR_TOKEN }}
 
